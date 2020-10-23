@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Vastra-Clothes on rent</title>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width , initial-scale=1.0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/nav.css" />
+	<link rel="stylesheet" href="css/menu.css" />
+	<link rel="stylesheet" href="css/styles.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" href="img/vastra_black.jpg">
+
+	<script>
+		function a()
+		{
+			
+  			var p=document.log_in.Uname.value;
+			var r=document.log_in.mail.value;
+			var q=document.log_in.Pass.value;
+			var	s=document.log_in.cp.value;
+			var	t=document.log_in.phn.value;
+			var	w=document.log_in.address.value;
+			var	v=document.log_in.city.value;
+
+			if(p=="")
+			{
+				alert("Please Enter user Name");
+				document.log_in.Uname.focus();
+				return false;
+			}
+
+			if(r=="")
+			{
+				alert("Please Enter E-mail");
+				document.log_in.mail.focus();
+				return false;
+			}
+
+			if(q=="")
+			{
+				alert("Please Enter Password");
+				document.log_in.Pass.focus();
+				return false;
+			}
+
+			if(s=="")
+			{
+				alert("Please Enter Confirm Password");
+				document.log_in.cp.focus();
+				return false;
+			}
+
+			if(t=="")
+			{
+				alert("Please Enter Phone Number");
+				document.log_in.phn.focus();
+				return false;
+			}
+
+			if(w=="")
+			{
+				alert("Please Enter Address");
+				document.log_in.address.focus();
+				return false;
+			}
+
+			if(document.log_in.gen[0].cheaked == false && document.log_in.gen[1].cheaked == false)
+			{
+				alert("Please Select Gender");
+				document.log_in.gen[0].focus();
+				return false;
+			}
+			if(v=="-")
+			{
+				alert("Please Select City");
+				document.log_in.city.focus();
+				return false;
+			}
+			
+			return(true);
+
+		}
+	</script>
+
+</head>
+
+<body 	style="background-repeat: no-repeat;  background-size: cover; background-image: url(img/background.jpg)" >
+	<header>
+		<h1>Vastra - Clothes On Rent</h1>
+	</header>  
+
+	<div class="menu-wrap">
+	
+		<input type="checkbox" class="toggler" />
+	
+		<div class="hamburgur">
+			<div> </div>
+		</div>
+	
+		<div class="menu">
+			<div>
+				<div>
+					<h1> Vastra </h1>
+				<ul>
+					<li><a href="index.html"> Home </a> </li>
+					<li><a href="about.html"> About Us </a> </li>
+					<li><a href="contact.html"> Contact Us </a> </li>
+					<li><a href="collection.html"> Collection </a> </li>
+					<li><a href="login.html"> Login </a> </li>
+					<li><a href="signup.html"> Sign up </a> </li>
+				</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+    <div class="login" style="margin-top: 70px;">    
+        <form name="log_in" method="post" action="index.html" onsubmit="return(a())" > 
+            <h1>Sign Up</h1>    
+            <input type="text" name="Uname" id="Uname" placeholder="Username"> 
+            <br><br>  
+            <input type="email" name="mail" id="mail" placeholder="abc@gmail.com">  
+            <br><br>    
+            <input type="Password"name="Pass" id="Pass" placeholder="Password">
+            <br><br>    
+            <input type="Password" name="cp" id="cp" placeholder="Confirm Password">    
+            <br><br>    
+            <input type="tel" name="phn" id="phn" placeholder="Phone Number">  
+            <br><br>    
+            <textarea name="address" rows="5" cols="40" placeholder="Address"></textarea>
+            <br><br>  
+            <input type="radio" name="gen" id="gen" >Female 
+            <input type="radio" name="gen" id="gen" >Male 
+            <br><br>  
+            <select placeholder="select City" name="city">
+				<option value="-">Select Any One</option>
+                <option value="surat">Surat</option>
+                <option value="bardoli">Bardoli</option>
+                <option value="ahemdabad">Ahmedabad</option>
+                <option value="vadodara">Vadodara</option>
+                <option value="rajkot">Rajkot</option>
+                <option value="bhavnagar">Bhavnagar</option>
+            </select>
+            <br><br>
+            <input type="date" name="dob">
+            <br><br>   
+
+            <input type="submit" name="log" id="log" value="Sign Up">       
+            <br><br>  
+            <h4 align="center">Already Account?<a href="login.html">Login</a></h4>
+        </form>     
+    </div>    
+
+	<footer>
+		<h4 >
+			<a href="index.html">Home </a>   | 
+		 	<a href="about.html">About us </a>   | 
+		 	<a href="contact.html">Contact us </a>
+		 	<br>
+		 	Copyright &copy; Design and Devlope by Vastra - Clothes On Rent.All rights reversed.
+		</h4>
+
+	</footer>
+
+</body>    
+</html> 

@@ -1,0 +1,227 @@
+:root
+{
+	--primary1-color: rgba(11, 77, 97, 0.75);
+	--primary-color: rgba(13,110,139,0.75);
+	--overlay-color: rgba(24,39,51,0.85);
+	--menu-speed: 0.75s;
+}
+
+/* Menu style of opening */
+.menu-wrap
+{
+	position: fixed;
+	top:0;
+	left:0;
+	z-index:1;
+}
+
+.menu-wrap .toggler
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	opacity: 0;
+	
+}
+
+.menu-wrap .hamburgur
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	height: 60px;
+	width: 60px;
+	padding: 1rem;
+	background-color: var(--primary-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+/*hamburger line*/
+
+.menu-wrap .hamburgur > div
+{
+	position: relative;
+	width: 100%;
+	height: 2px;
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.4s ease;
+}
+
+/*top-bottom lines of hamburger*/
+.menu-wrap .hamburgur > div:before,
+.menu-wrap .hamburgur > div:after
+{
+	content: '';
+	position: absolute;
+	z-index: 1;
+	top: -10px;
+	width: 100%;
+	height: 2px;
+	background: inherit;
+}
+
+/*moves line down*/
+.menu-wrap .hamburgur > div:after
+{
+	top: 10px;
+}
+
+/*Toggler animate*/
+
+.menu-wrap .toggler:checked + .hamburgur > div
+{
+	transform: rotate(135deg);
+}
+
+/*Turn lines into x*/
+
+.menu-wrap .toggler:checked + .hamburgur > div:before,
+.menu-wrap .toggler:checked + .hamburgur > div:after
+{
+	top: 0;
+	transform: rotate(90deg);
+	
+}
+
+/*Rotate on hover when checked*/
+
+.menu-wrap .toggler:checked:hover + .hamburgur > div
+{
+	transform: rotate(225deg);
+}
+
+/*manu transaction process*/
+/*Show menu*/
+
+.menu-wrap .toggler:checked ~ .menu
+{
+	visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div
+{
+	transform: scale(1);
+	transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div
+{
+	opacity: 1;
+	transition : opacity 0.4s ease;
+}
+
+.menu-wrap .menu
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height:100%;
+	visibility: hidden;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.menu-wrap .menu > div
+{
+	background-color: var(--overlay-color);
+	border-radius:50%;
+	width:250vw;
+	height:290vw;
+	display: flex;
+	flex: none;
+	align-items: center;
+	justify-content: center;
+	transform : scale(0);
+	transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div
+{
+	text-align:center;
+	max-width:100vw;
+	max-height: 100vh;
+	opacity: 0;
+	transition: opacity 0.4s ease;
+}
+.menu-wrap .menu > div > div >h1
+{
+	font-size:4rem;
+	color:#FFFFFF;
+	font-family: Papyrus;
+}
+
+.menu-wrap .menu > div > div > ul > li
+{
+	list-style: none;
+	color: #FFFFFF;
+	font-size: 1.5rem;
+	padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a
+{
+	color: inherit;
+	text-decoration: none;
+	transition: color 0.4s ease;
+}
+
+ul li a:hover, .dropdown:hover .dropbtn{
+	background-color:black;
+	/* background-color: var(--primary1-color); */
+	color: white;
+	border-radius: 10px;
+	padding: 10px 20px;
+}
+
+@media only screen and (max-width: 600px)
+{
+	.menu-wrap .menu > div > div >h1
+	{
+		font-size:30px;
+		color:#FFFFFF;
+		font-family: Papyrus;
+	}
+
+	.menu-wrap .menu > div > div > ul > li
+	{
+		list-style: none;
+		color: #FFFFFF;
+		font-size: 15px;
+		padding: 1rem;
+	}
+
+	.menu-wrap .menu > div > div > ul > li > a
+	{
+		color: inherit;
+		text-decoration: none;
+		transition: color 0.4s ease;
+	}	
+	.menu-wrap .hamburgur
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		height: 45px;
+		width: 50px;
+		padding: 1rem;
+		background-color: var(--primary-color);
+		display: flex;
+		align-items: center;
+		justify-content: center;		
+	}
+}
