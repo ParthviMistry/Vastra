@@ -154,6 +154,10 @@ header h1{
         margin-left: 35px;
         font-family: Papyrus;
       }
+      header{
+        height: 6.5%;
+        width: 100%;
+      }
       footer h4{
         margin-top: 12px;
         text-align: center;
