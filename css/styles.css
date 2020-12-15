@@ -54,7 +54,7 @@ header{
     left: 0;
     z-index: 1;
 	color: white;
-	height: 13%;
+	height: 9%;
 	width: 100%;
 	text-align: center;
 	transition: 0.3s;
@@ -74,7 +74,7 @@ header h1{
 
 @media only screen and (max-width: 1260px){
     header{
-      height: 13%;
+      height: 9%;
       width: 100%;
     }
     header h1{
@@ -98,7 +98,7 @@ header h1{
 
 @media only screen and (max-width: 1000px){
       header{
-        height: 11%;
+        height: 8.5%;
         width: 100%;
       }
       header h1{
@@ -117,7 +117,7 @@ header h1{
         font-size: 33px;
     }
       header{
-        height: 11%;
+        height: 8%;
         width: 100%;
       }
 
@@ -131,7 +131,7 @@ header h1{
         font-size: 27px;
       }
       header{
-        height: 10%;
+        height: 6.8%;
         width: 100%;
       }
 
